@@ -1,20 +1,18 @@
-import React, { Component } from "react";
-import Family from "./Family";
-import MyProvider from "./MyProvider";
+import React from "react";
+import "./App.css";
+import MovieList from "./MovieList";
+import Nav from "./Nav";
+import { MovieProvider } from "./MovieContext";
 
-//create context
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        App
-        <MyProvider>
-          <Family />
-        </MyProvider>
+function App() {
+  return (
+    <MovieProvider>
+      <div className="App">
+        <Nav />
+        <MovieList />
       </div>
-    );
-  }
+    </MovieProvider>
+  );
 }
 
 export default App;
