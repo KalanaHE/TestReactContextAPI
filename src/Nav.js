@@ -1,17 +1,3 @@
-// import React, { useContext } from "react";
-// import { MovieContext } from "./MovieContext";
-// function Nav() {
-//   const [movies, setMovies] = useContext(MovieContext);
-//   return (
-//     <div>
-//       <h3>KalanaHE</h3>
-//       <p>List of movies: {movies.length}</p>
-//     </div>
-//   );
-// }
-
-// export default Nav;
-
 import React, { useContext } from "react";
 import { MovieContext } from "./MovieContext";
 import { makeStyles } from "@material-ui/core/styles";
@@ -33,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Nav = () => {
-  const [movies, setMovies] = useContext(MovieContext);
+  const [movies] = useContext(MovieContext);
   const classes = useStyles();
 
   return (
