@@ -2,6 +2,6 @@ import React, { Component } from "react";
 
 export default class Person extends Component {
   render() {
-    return <div> Hello {this.props.name} </div>;
+    return <div> How do i access my data here??? </div>;
   }
 }

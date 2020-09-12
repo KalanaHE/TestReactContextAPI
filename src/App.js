@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import Family from "./Family";
+import MyProvider from "./MyProvider";
 
-export default class App extends Component {
-  state = {
-    name: "kalana",
-    age: 24,
-    cool: true,
-  };
+//create context
+
+class App extends Component {
   render() {
     return (
       <div>
         App
-        <Family name={this.state.name} />
+        <MyProvider>
+          <Family />
+        </MyProvider>
       </div>
     );
   }
 }
+
+export default App;
